@@ -1,22 +1,4 @@
-{% load staticfiles %}
-<!doctype html>
-<html lang="en" class="no-js">
-    <head>
-    	<meta charset="UTF-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	
-    	<link href='https://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
-    
-    	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-    	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-        <link rel="stylesheet" href="css/app.css">
-    	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-      	
-    	<title>Frankip</title>
-    </head>
-    <body>
-        <div>
+<div>
     <nav>
         <div>
             <a href="{% url 'reviews:review_list' %}">Winerama</a>
@@ -29,10 +11,9 @@
         </div>
     </nav>
     
-     <h1>{% block title %}(no title){% endblock %}</h1>
-     
-       {% block content %}(no content){% endblock %}
-      </div>
-    </body>
-</html>
-    
+
+    <h1>{% block title %}(no title){% endblock %}</h1>
+
+
+    {% block content %}(no content){% endblock %}
+</div>
