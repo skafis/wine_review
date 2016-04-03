@@ -6,7 +6,9 @@ from .forms import ReviewForm
 import datetime
 # Create your views here.
 
-def review_list(request):
+def user_review_list(request, username=None):
+    if not username:
+        username = request.user.username
     latest_review_list = Review.objects.order_by('-pub_date')[:9]
     context = {'latest_review_list' :latest_review_list}
     return render(request, 'reviews/review_list.html', context)
