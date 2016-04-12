@@ -1,0 +1,19 @@
+<div>
+    <nav>
+        <div>
+            <a href="{% url 'reviews:review_list' %}">Wine Review</a>
+        </div>
+        <div id "navbar">
+            <ul>
+                <li><a href="{% url 'reviews:wine_list' %}"> wine list</a></li>
+                <li><a href="{% url 'reviews:review_list' %}"> Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <h1>{% block title %}(no title){% endblock %}</h1>
+
+{% block content %}(no content){% endblock %}
+
+</div>
+
