@@ -5,9 +5,9 @@
 {% endblock %}
 {% block content %}
 {% if wine_list %}
-<div>
+<div class = "large-4 columns list ">
     {% for wine in wine_list %}
-    <div>
+    <div class= "row">
         <h4><a href="{% url 'reviews:wine_detail' wine.id %}">
         {{ wine.name }}
         </a></h4>
