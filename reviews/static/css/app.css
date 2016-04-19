@@ -1,0 +1,25 @@
+.navbar-default{
+    background-color: darkcyan;
+}
+.navbar{
+    display:table-row;
+    height: 200px;
+    color: #FF0000;
+    vertical-align: middle;
+    text-align: center;
+}
+
+li {
+    height: 30px;
+    line-height: 30px;
+}
+
+
+.list{
+    background-color: #111;
+}
+
+.main{
+    text-size: 20px;
+    color: green;
+}
