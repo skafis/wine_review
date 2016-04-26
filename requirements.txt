@@ -92,7 +92,6 @@ sphinx-rtd-theme==0.1.9
 sure==1.2.7
 tox==2.3.1
 txaio==2.2.2
-uTidylib==0.2
 uritemplate==0.6
 urllib3==1.7.1
 vboxapi==1.0
