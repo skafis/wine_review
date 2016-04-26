@@ -90,7 +90,6 @@ six==1.10.0
 snowballstemmer==1.2.1
 sphinx-rtd-theme==0.1.9
 sure==1.2.7
-system-service==0.1.6
 tox==2.3.1
 txaio==2.2.2
 uTidylib==0.2
