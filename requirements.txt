@@ -14,7 +14,6 @@ South==1.0.2
 Sphinx==1.4
 Twisted==16.1.0
 alabaster==0.7.7
-apt-xapian-index==0.45
 apturl==0.4.1ubuntu4
 argparse==1.2.1
 asgi-redis==0.10.0
