@@ -59,7 +59,6 @@ numpy==1.8.2
 oauth2==1.9.0.post1
 oauth2client==2.0.1
 oauthlib==1.0.3
-oneconf==0.3.7.14.04.1
 paramiko==1.10.1
 pexpect==3.1
 piston-mini-client==0.7.5
