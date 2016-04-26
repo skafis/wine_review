@@ -10,29 +10,47 @@
             <!-- Foundation css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css">
         <link rel="stylesheet" href="{% static 'css/normalize.min.css' %}">
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
         <!--<link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/png">    -->
         <link rel="stylesheet" href="css/app.css">
     </head>
-    <nav class="navbar navbar-default">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{% url 'reviews:review_list' %}">Winerama</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li><a href="{% url 'reviews:wine_list' %}">Wine list</a></li>
-            <li><a href="{% url 'reviews:review_list' %}">Home</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-        {% if user.is_authenticated %}
-            <li><a href=">Hello {{ user.username }}"</a></li>
-            <li><a href="{% url 'auth:logout' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'auth:login' %}">Login</a></li>
-            {% endif %}
-        </ul>
-    </div>
+<!--    <nav class="navbar navbar-default">-->
+<!--    <div class="navbar-header">-->
+<!--        <a class="navbar-brand" href="{% url 'reviews:review_list' %}">Winerama</a>-->
+<!--    </div>-->
+<!--    <div id="navbar" class="navbar-collapse collapse">-->
+<!--        <ul class="nav navbar-nav">-->
+<!--            <li><a href="{% url 'reviews:wine_list' %}">Wine list</a></li>-->
+<!--            <li><a href="{% url 'reviews:review_list' %}">Home</a></li>-->
+<!--        </ul>-->
+<!--        <ul class="nav navbar-nav navbar-right">-->
+<!--        {% if user.is_authenticated %}-->
+<!--            <li><a href=">Hello {{ user.username }}"</a></li>-->
+<!--            <li><a href="{% url 'auth:logout' %}">Logout</a></li>-->
+<!--            {% else %}-->
+<!--            <li><a href="{% url 'auth:login' %}">Login</a></li>-->
+<!--            {% endif %}-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<nav class="menu">
+    
+  <!--<h1 class="name"><i class="fi-widget"></i> TOP GEAR</a></h1>-->
+  
+  <ul class="inline-list">
+    <li class="active"><a href="{% url 'reviews:wine_list' %}">WINERAMA</a></li>  
+    <li><a href="{% url 'reviews:review_list' %}">HOME</a></li>
+    <li><a href="{% url 'reviews:wine_list' %}">wine_list</a></li>
+  </ul>
+  <ul class="inline-list hide-for-small-only account-action">
+    <li><a href="#" data-reveal-id="myModal">Login</a></li>
+    <li class=""><a class="signup" href="#" data-reveal-id="myModal">Signup</a></li>
+  </ul>
+  <a class="account hide-for-medium-up" href="#" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
 </nav>
+
     
     <h1>{% block title %}(no title){% endblock %}</h1>
 
