@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f2ef80c-5569-4e00-b91f-c2376c857848" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wine_review/settings.py" afterPath="$PROJECT_DIR$/wine_review/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wine_review/urls.py" afterPath="$PROJECT_DIR$/wine_review/urls.py" />
     </list>
     <ignored path="wine_review.iws" />
@@ -68,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wine_review/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -80,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wine_review/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
               <folding>
                 <element signature="e#0#699#1" expanded="false" />
                 <element signature="e#700#732#0" expanded="true" />
@@ -113,8 +113,8 @@
       <list>
         <option value="$PROJECT_DIR$/wine_review/wsgi.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/wine_review/urls.py" />
         <option value="$PROJECT_DIR$/wine_review/settings.py" />
+        <option value="$PROJECT_DIR$/wine_review/urls.py" />
       </list>
     </option>
   </component>
@@ -628,23 +628,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wine_review/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#699#1" expanded="false" />
-            <element signature="e#700#732#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wine_review/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding>
             <element signature="e#310#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wine_review/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#699#1" expanded="false" />
+            <element signature="e#700#732#0" expanded="true" />
           </folding>
         </state>
       </provider>
