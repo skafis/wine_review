@@ -25,7 +25,6 @@ configglue==1.1.2
 configobj==4.7.2
 coverage==4.0.3
 daphne==0.10.3
-debtagshw==0.1
 defer==1.0.6
 dirspec==13.10
 dj-database-url==0.4.0
