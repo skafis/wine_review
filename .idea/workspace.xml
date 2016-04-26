@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f2ef80c-5569-4e00-b91f-c2376c857848" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wine_review/urls.py" afterPath="$PROJECT_DIR$/wine_review/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reviews/models.py" afterPath="$PROJECT_DIR$/reviews/models.py" />
     </list>
     <ignored path="wine_review.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wine_review/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
@@ -89,6 +88,16 @@
                 <element signature="e#0#699#1" expanded="false" />
                 <element signature="e#700#732#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reviews/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,6 +124,7 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/wine_review/settings.py" />
         <option value="$PROJECT_DIR$/wine_review/urls.py" />
+        <option value="$PROJECT_DIR$/reviews/models.py" />
       </list>
     </option>
   </component>
@@ -646,6 +656,14 @@
             <element signature="e#0#699#1" expanded="false" />
             <element signature="e#700#732#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reviews/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
