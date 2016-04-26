@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Time for Good</title>
+        <title>Winerama</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,13 +41,18 @@
   
   <ul class="inline-list">
     <li class="active"><a href="{% url 'reviews:wine_list' %}">WINERAMA</a></li>  
-    <li><a href="{% url 'reviews:review_list' %}">HOME</a></li>
-    <li><a href="{% url 'reviews:wine_list' %}">wine_list</a></li>
+    <li><a href="{% url 'reviews:review_list' %}">LATEST REVIEWS</a></li>
+    <li><a href="{% url 'reviews:wine_list' %}">WINE LIST</a></li>
   </ul>
-  <ul class="inline-list hide-for-small-only account-action">
-    <li><a href="#" data-reveal-id="myModal">Login</a></li>
-    <li class=""><a class="signup" href="#" data-reveal-id="myModal">Signup</a></li>
-  </ul>
+  <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+            <li><a href=">Hello {{ user.username }}"</a></li>
+            <li><a href="{% url 'auth:logout' %}">Logout</a></li>
+            {% else %}
+            <li><a href="{% url 'auth:login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+  
   <a class="account hide-for-medium-up" href="#" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
 </nav>
 
