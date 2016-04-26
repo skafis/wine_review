@@ -40,7 +40,6 @@ django-swingtime==0.7.1
 djangorestframework==3.3.3
 dnspython==1.11.1
 docutils==0.12
-duplicity==0.6.23
 feedparser==5.2.1
 freeze==0.8.0
 google-api-python-client==1.5.0
