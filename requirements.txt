@@ -76,7 +76,6 @@ pyinotify==0.9.4
 pyserial==2.6
 pysmbc==1.0.14.1
 python-dateutil==2.5.2
-python-debian==0.1.21-nmu2ubuntu2
 python-openid==2.2.5
 python-social-auth==0.2.14
 pytz==2016.3
