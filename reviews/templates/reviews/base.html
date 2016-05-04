@@ -14,24 +14,23 @@
         <link rel="stylesheet" href="{% static 'css/aapp.css' %}">
     </head>
 <nav class="menu">
-      
-  <ul class="inline-list">
-    <li class="active"><a href="{% url 'reviews:wine_list' %}">WINERAMA</a></li>  
-    <li><a href="{% url 'reviews:review_list' %}">LATEST REVIEWS</a></li>
-    <li><a href="{% url 'reviews:wine_list' %}">WINE LIST</a></li>
-  </ul>
-  </nav>
-  <ul class="nav navbar-nav navbar-right">
-        {% if user.is_authenticated %}
-            <li><a href="#">Hello {{ user.username }}</a></li>
-            <li><a href="{% url 'auth:logout' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'auth:login' %}">Login</a></li>
-            {% endif %}
-        </ul>
-  
-  <a class="account hide-for-medium-up" href="#" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
 
+    <ul class="inline-list">
+        <li class="active"><a href="{% url 'reviews:wine_list' %}">WINERAMA</a></li>
+        <li><a href="{% url 'reviews:review_list' %}">LATEST REVIEWS</a></li>
+        <li><a href="{% url 'reviews:wine_list' %}">WINE LIST</a></li>
+    </ul>
+    <ul class="top-bar-right details">
+        {% if user.is_authenticated %}
+        <a href="#">Hello {{ user.username }}</a>    
+        <a href="{% url 'auth:logout' %}">Logout</a> 
+        {% else %}
+        <a href="{% url 'auth:login' %}">Login</a>
+        {% endif %}
+    </ul>
+
+    <a class="account hide-for-medium-up" href="#" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
+</nav>
 
     
     <h1>{% block title %}(no title){% endblock %}</h1>
