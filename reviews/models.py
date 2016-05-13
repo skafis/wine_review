@@ -7,6 +7,7 @@ import numpy as np
 
 class Wine (models.Model):
     name =  models.CharField(max_length=200)
+    description = models.TextField(null=True)
     
     def avarage_rating (self):
         all_ratings = map(lambda x: x.rating, self.review_set.all())

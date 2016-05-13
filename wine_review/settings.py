@@ -58,8 +58,8 @@ ROOT_URLCONF = 'wine_review.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': [os.path.join(PROJECT_ROOT, 'reviews/templates')],
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'reviews/templates')],
+        # 'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

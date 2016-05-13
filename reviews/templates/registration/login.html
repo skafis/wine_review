@@ -1,10 +1,14 @@
+{% extends 'reviews/base.html' %}
+{% load staticfiles %}
 
+{% block title %}
 <h2>Login</h2>
+{% endblock %}
 
 {% block content %}
 <form action="{% url 'auth:login' %}" method="post" class="form">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-primary"> login</button>
+    <button type="submit" class="success button"> login</button>
 </form>
 {% endblock %}

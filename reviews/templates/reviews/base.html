@@ -22,14 +22,14 @@
     </ul>
     <ul class="top-bar-right details">
         {% if user.is_authenticated %}
-        <a href="#">Hello {{ user.username }}</a>    
+        <a href="{% url 'reviews:user_review_list' user.username %">Hello {{ user.username }}</a>    
         <a href="{% url 'auth:logout' %}">Logout</a> 
         {% else %}
         <a href="{% url 'auth:login' %}">Login</a>
         {% endif %}
     </ul>
 
-    <a class="account hide-for-medium-up" href="#" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
+    <a class="account hide-for-medium-up" href="{% url 'auth:login' %}" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
 </nav>
 
     

@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from .models import Review, Wine
-from .forms import ReviewForm
+from .forms import ReviewForm, wineForm
 from django.contrib.auth.decorators import login_required
 import datetime
 # Create your views here.
@@ -22,6 +22,14 @@ def wine_list(request):
     wine_list = Wine.objects.order_by('-name')
     context = {'wine_list' : wine_list}
     return render(request, 'reviews/wine_list.html', context)
+
+def add_new(request):
+    form = wineForm(request.POST)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        return HttpResponseRedirect(instance.get_absolute_url())
+    return render (request, 'reviews/wine_list.html', {'form': form})
     
 def wine_detail(request, wine_id):
     wine = get_object_or_404(Wine, pk=wine_id)
@@ -54,6 +62,6 @@ def add_review(request, wine_id):
 def user_review_list(request, username=None):
     if not username:
         username = request.user.username
-    latest_review_list = Review.objects.filter(username=username).order_by('-pub_date')
+    latest_review_list = Review.objects.filter(username=user_name).order_by('-pub_date')
     context = {'latest_review_list': latest_review_list, 'username':username}
     return render(request, 'reviews/user_review_list.html',context)
