@@ -19,6 +19,7 @@
         <li class="active"><a href="{% url 'reviews:wine_list' %}">WINERAMA</a></li>
         <li><a href="{% url 'reviews:review_list' %}">LATEST REVIEWS</a></li>
         <li><a href="{% url 'reviews:wine_list' %}">WINE LIST</a></li>
+        <li><a href="{% url 'reviews:user_recommendation_list' %}">wine suggestions </a>
     </ul>
     <ul class="top-bar-right details">
         {% if user.is_authenticated %}

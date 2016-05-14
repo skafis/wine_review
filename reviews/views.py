@@ -67,8 +67,11 @@ def user_review_list(request, username=None):
     context = {'latest_review_list': latest_review_list, 'username':username}
     return render(request, 'reviews/user_review_list.html',context)
 
+@login_required
 def user_recomendation_list(request):
+    #get the user reviews
+    user_reviews = Review.objects.filter(user_name = request.user.username).prefetch_related('wine')
     context = {
     'username': request.user.username,
     }
-    return render(request, 'reviews/user_recomendation_list.html', context)
+    return render(request, 'reviews/user_recommendation_list.html', context)
