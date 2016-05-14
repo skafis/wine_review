@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^', include('reviews.urls', namespace="reviews")),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls', namespace="auth")),
-]
+    ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

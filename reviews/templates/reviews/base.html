@@ -22,10 +22,11 @@
     </ul>
     <ul class="top-bar-right details">
         {% if user.is_authenticated %}
-        <a href="{% url 'reviews:user_review_list' user.username %">Hello {{ user.username }}</a>    
+        <a href="{% url 'reviews:user_review_list' user.username %}">Hello {{ user.username }}</a>    
         <a href="{% url 'auth:logout' %}">Logout</a> 
         {% else %}
         <a href="{% url 'auth:login' %}">Login</a>
+        <li><a href="/accounts/register">Register</a></li>
         {% endif %}
     </ul>
 
