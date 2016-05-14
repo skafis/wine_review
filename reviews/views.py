@@ -62,6 +62,6 @@ def add_review(request, wine_id):
 def user_review_list(request, username=None):
     if not username:
         username = request.user.username
-    latest_review_list = Review.objects.filter(username=user_name).order_by('-pub_date')
+    latest_review_list = Review.objects.filter(user_name=username).order_by('-pub_date')
     context = {'latest_review_list': latest_review_list, 'username':username}
     return render(request, 'reviews/user_review_list.html',context)

@@ -1,0 +1,14 @@
+{% extends 'reviews/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+<h2>Register</h2>
+{% endblock %}
+
+{% block content %}
+<form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+        <button type="submit" class="success button">Register</button>
+</form>
+{% endblock %}
