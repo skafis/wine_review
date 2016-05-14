@@ -71,7 +71,12 @@ def user_review_list(request, username=None):
 def user_recomendation_list(request):
     #get the user reviews
     user_reviews = Review.objects.filter(user_name = request.user.username).prefetch_related('wine')
+    #from reviews,get set of wine ids
+    user_reviews_wine_ids = set(map(lambda x: x.wine.id, user_reviews))
+    #get wine list excluding previous IDS
+    wine_list = Wine.objects.exlude(id_in=user_reviews_wine_ids)
     context = {
     'username': request.user.username,
+    'wine_list':wine_list,
     }
     return render(request, 'reviews/user_recommendation_list.html', context)
