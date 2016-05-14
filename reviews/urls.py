@@ -14,4 +14,7 @@ urlpatterns = [
     url(r'^add/$', views.add_new, name='add'),
     url(r'^review/user/$', views.user_review_list, name='user_review_list'),
     url(r'^review/user/(?P<username>\w+)/$', views.user_review_list, name='user_review_list'),
+    # ex: /recommendation - get wine recommendations for the logged user
+    url(r'^recomendations/$', views.user_recomendation_list, name='user_recommendation_list'),
+
 ]
