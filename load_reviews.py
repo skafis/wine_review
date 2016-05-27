@@ -2,12 +2,12 @@ import sys, os
 import pandas as pd
 import datetime
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "winerama.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "wine_review.settings")
 
 import django
 django.setup()
 
-from reviews.models import Review, wine
+from reviews.models import Review, Wine
 
 def save_review_from_row(review_row):
 	review = Review()

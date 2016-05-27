@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from .models import Review, Wine
 from .forms import ReviewForm, wineForm
+from .suggestions import update_clusters
 
 from django.contrib.auth.decorators import login_required
 import datetime
@@ -44,7 +45,6 @@ def add_review(request, wine_id):
     if form.is_valid():
         rating = form.cleaned_data['rating']
         comment = form.cleaned_data['comment']
-        # user_name = form.cleaned_data['user_name']
         user_name = request.user.username
         review = Review()
         review.wine = wine
@@ -53,6 +53,7 @@ def add_review(request, wine_id):
         review.comment = comment
         review.pub_date = datetime.datetime.now()
         review.save()
+        update_clusters()
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
@@ -77,8 +78,14 @@ def user_recomendation_list(request):
     wine_list = Wine.objects.exlude(id__in=user_reviews_wine_ids)
 
     # get request user cluster name (just the first 
-    user_cluster_name = \
+    try:
+        user_cluster_name = \
         User.objects.get(username=request.user.username).cluster_set.first().name
+        
+    except: 
+        update_clusters()
+        user_cluster_name = \
+            User.objects.get(username=request.user.username).cluster_set.first().name  
 
     # get usernames for other members of the cluster
     user_cluster_other_members = \

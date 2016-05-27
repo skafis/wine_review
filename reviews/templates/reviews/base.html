@@ -10,6 +10,7 @@
             <!-- Foundation css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css">
         <link rel="stylesheet" href="{% static 'css/normalize.min.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/png">
         <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/aapp.css' %}">
     </head>
@@ -21,16 +22,15 @@
         <li><a href="{% url 'reviews:wine_list' %}">WINE LIST</a></li>
         <li><a href="{% url 'reviews:user_recommendation_list' %}">wine suggestions </a>
     </ul>
-    <ul class="top-bar-right details">
+    <ul class="inline-list hide-for-small-only account-action">
         {% if user.is_authenticated %}
-        <a href="{% url 'reviews:user_review_list' user.username %}">Hello {{ user.username }}</a>    
-        <a href="{% url 'auth:logout' %}">Logout</a> 
+            <a href="{% url 'reviews:user_review_list' user.username %}">Hello {{ user.username }}</a>
+            <a href="{% url 'auth:logout' %}">Logout</a> 
         {% else %}
-        <a href="{% url 'auth:login' %}">Login</a>
-        <li><a href="/accounts/register">Register</a></li>
+            <li><a href="{% url 'auth:login' %}" data-reveal-id="myModal">Login</a></li>
+            <li class=""><a class="signup" href="/accounts/register" data-reveal-id="myModal">Signup</a></li>
         {% endif %}
-    </ul>
-
+  </ul>
     <a class="account hide-for-medium-up" href="{% url 'auth:login' %}" data-reveal-id="myModal"><i class="fi-unlock"></i></a>
 </nav>
 
