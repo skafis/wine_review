@@ -3,22 +3,23 @@ import pandas as pd
 import datetime
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "wine_review.settings")
-
 import django
 django.setup()
 
-from reviews.models import Review, Wine
+from reviews.models import Review, Wine 
+
 
 def save_review_from_row(review_row):
-	review = Review()
-	review.id = review_row[0]
-	review.user_name = review_row[1]
-	review.wine = wine.objects.get(id=review_row[2])
-	review.rating = review_row[3]
-	review.pub_date = datetime.datetime.now()
-	review.comment = review_row[4]
-	review.save()
-
+    review = Review()
+    review.id = review_row[0]
+    review.user_name = review_row[1]
+    review.wine = Wine.objects.get(id=review_row[2])
+    review.rating = review_row[3]
+    review.pub_date = datetime.datetime.now()
+    review.comment = review_row[4]
+    review.save()
+    
+    
 if __name__ == "__main__":
     
     if len(sys.argv) == 2:

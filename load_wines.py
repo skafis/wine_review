@@ -8,12 +8,14 @@ django.setup()
 
 from reviews.models import Wine 
 
-def save_wine_from_row(wine_row):
-	wine = Wine()
-	wine.id = wine_row[0]
-	wine.name = wine_row[1]
-	wine.save()
 
+def save_wine_from_row(wine_row):
+    wine = Wine()
+    wine.id = wine_row[0]
+    wine.name = wine_row[1]
+    wine.save()
+    
+    
 if __name__ == "__main__":
     
     if len(sys.argv) == 2:
