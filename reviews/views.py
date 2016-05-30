@@ -11,7 +11,7 @@ import datetime
 def review_list(request, username=None):
     # if not username:
         # username = request.user.username
-    latest_review_list = Review.objects.order_by('-pub_date')[:9]
+    latest_review_list = Review.objects.order_by('-pub_date')
     context = {'latest_review_list' :latest_review_list}
     return render(request, 'reviews/review_list.html', context)
 
@@ -21,7 +21,11 @@ def review_detail(request, review_id):
     
 def wine_list(request):
     wine_list = Wine.objects.order_by('-name')
-    context = {'wine_list' : wine_list}
+    latest_review_list = Review.objects.order_by('-pub_date')
+    context = {
+    'wine_list' : wine_list,
+    'latest_review_list' :latest_review_list
+    }
     return render(request, 'reviews/wine_list.html', context)
 
 def add_new(request):

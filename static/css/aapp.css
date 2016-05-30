@@ -1,3 +1,14 @@
+
+h2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+}
+h5, p{
+    font-family: 'Gloria Hallelujah', cursive;
+}
+h4{
+    font-family: 'Kaushan Script', cursive;
+}
 .navbar {
     display: table-row;
     height: 200px;
@@ -157,3 +168,8 @@ h2 {
     border-radius: 50%;
     margin-top: -3rem;
 }
+.article-card h2{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3rem;
+}
+

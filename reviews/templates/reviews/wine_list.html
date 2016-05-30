@@ -4,32 +4,18 @@
 <h2>Wine list</h2>
 {% endblock %}
 {% block content %}
-<!-- {% if wine_list %}:
-<div class = "large-4 columns list ">
-    {% for wine in wine_list %}
-    <div class= "row">
-        <h4><a href="{% url 'reviews:wine_detail' wine.id %}">
-        {{ wine.name }}
-        </a></h4>
-        <h5>{{ wine.review_set.count }} reviews</h5>
-        <h5>{{ wine.average_rating | floatformat }} average rating</h5>
-    </div>
-    {% endfor %}
-</div>
-{% else %}
-    <p>No wines are available.</p>
-{% endif %} -->
 <!-- ################################################################################################################-->
+{% if wine_list %}:
  <div class="row">
-    {% for wine in wine_list %}
+ <div class="medium-9 large-9 columns">
+      {% for wine in wine_list %}
       <div class="medium-6 large-4 columns">
         <article class="article-card">
-          <img src="https://static.pexels.com/photos/87224/pexels-photo-87224.jpeg">
+          <img src="{% static 'img/img-1.jpeg' %}">
           <div class="card-content">
-            <img class="post-icon" src="http://zurb.com/stickers/images/intro-foundation.png" alt="foundation icon">
+          <img class="post-icon" src="{% static 'img/logo-1.png' %}" alt="foundation icon">
             <p class="post-author">By <a href="#">{{review.user_name}}</a></p>
              <h4><a href="{% url 'reviews:wine_detail' wine.id %}">{{ wine.name }}</a></h4>
-            <!-- <p>If my answers frighten you then you should cease asking scary questions. Zed's dead, baby. Zed's dead. I love you, Pumpkin. I love you, Honey Bunny. All right, everybody be cool, this is a robbery!</p> -->
             <h5>{{ wine.review_set.count }} reviews</h5>
             <h5>{{ wine.average_rating | floatformat }} average rating</h5>
             <p>
@@ -41,5 +27,24 @@
         </article>
       </div>
       {% endfor %}
-    </div>
+ </div>
+ <div class="medium-3 large-3 columns">
+      <div class="medium-12 large-12 columns">
+
+        <article class="article-card">
+        <h2>Latest Review</h2>
+        {% for review in latest_review_list %}
+
+          <div class="card-content">
+             <h4><a href="{% url 'reviews:review_detail' review.id %}"> {{ review.wine.name }}</a></h4>
+          </div>
+          {% endfor %}
+        </article>
+      </div>
+      
+ </div>
+</div>
+{% else %}
+  <p>No wines are available.</p>
+{% endif %}
 {% endblock %}
