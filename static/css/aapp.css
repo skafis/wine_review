@@ -4,10 +4,10 @@ h2{
     font-size: 5rem;
 }
 h5, p{
-    font-family: 'Gloria Hallelujah', cursive;
+    /*font-family: 'Gloria Hallelujah', cursive;*/
 }
 h4{
-    font-family: 'Kaushan Script', cursive;
+    /*font-family: 'Kaushan Script', cursive;*/
 }
 .navbar {
     display: table-row;

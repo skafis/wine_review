@@ -1,13 +1,9 @@
 {% extends 'reviews/base.html' %}
 {% load staticfiles %}
-
 {% block title %}
-
- <form action = "{% url 'reviews:wine_list' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p}}
-        <input type="submit" value="Add"/>
-    </form>
-
-
+	<form action = "{% url 'reviews:wine_list' %}" method="post">
+		{% csrf_token %}
+		{{ form.as_p}}
+		<input type="submit" value="Add"/>
+	</form>
 {% endblock %}

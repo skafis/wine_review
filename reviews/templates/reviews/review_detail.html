@@ -1,12 +1,20 @@
 {% extends 'reviews/base.html' %}
 {% load staticfiles %}
-
 {% block title %}
-<h2><a href="{% url 'reviews:wine_detail' review.wine.id %}">{{ review.wine.name }}</a></h2>
+	<h2><a href="{% url 'reviews:wine_detail' review.wine.id %}">{{ review.wine.name }}</a></h2>
 {% endblock %}
-
 {% block content %}
-<h4>Rated {{ review.rating }} of 5 by <a href="{% url 'reviews:user_review_list' review.user_name %}">{{ review.user_name}}</a> </h4>
-<p>{{ review.pub_date }}</p>
-<p>{{ review.comment }}</p>
+	<!-- <h4>Rated {{ review.rating }} of 5 by <a href="{% url 'reviews:user_review_list' review.user_name %}">{{ review.user_name}}</a> </h4>
+	<p>{{ review.pub_date }}</p>
+	<p>{{ review.comment }}</p> -->
+	<!-- ########################################################################### -->
+	<div class="medium-6 large-4 columns centered">
+		<article class="article-card">
+			<div class="card-content">
+				<h4>Rated {{ review.rating }} of 5 by <a href="{% url 'reviews:user_review_list' review.user_name %}">{{ review.user_name}}</a> </h4>
+				<h6>{{ review.pub_date }}</h6>
+				<p><p>{{ review.comment }}</p>
+			</div>
+		</article>
+	</div>
 {% endblock %}

@@ -1,5 +1,6 @@
-venv
+venv/
 *.pyc
-staticfiles
+staticfiles/
 .env
 db.sqlite3
+.idea/
